@@ -14,5 +14,5 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='!n', intents=intents)
 
-##### DONT TOUCH
+##### Bot Run Token -- DONT TOUCH
 bot.run(token)
