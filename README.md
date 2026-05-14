@@ -1,2 +1,3 @@
-# NewsAnchorBot
-WIP
+# News Relay System
+
+
