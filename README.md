@@ -7,18 +7,18 @@
 </p>
 
 ## Information
-- A system to relay news articles directly from online databases to any Discord channel.
+A system to relay news articles directly from online databases to any Discord channel.
   
 ## Background
-- This project was started for no reason other than the desire to have news articles directly relayed and posted automatically on our Discord server's channel, compared to us reposting them manually. While there are other similar projects out there, I would rather not to miss out on the opportunity to learn how to make such a system myself.
+This project was started for no reason other than the desire to have news articles directly relayed and posted automatically on our Discord server's channel, compared to us reposting them manually. While there are other similar projects out there, I would rather not to miss out on the opportunity to learn how to make such a system myself.
 
 ## Installation
-- Currently unavailable.
+Currently unavailable.
 
 ## Usage
-- Currently unavailable.
+Currently unavailable.
 
-- While this is currently unavailable, it is planned that this can be used by anyone, anytime by running it in their own IDEs or by hosting it on a server.
+While this is currently unavailable, it is planned that this can be used by anyone, anytime by running it in their own IDEs or by hosting it on a server.
 
 ## License
 
