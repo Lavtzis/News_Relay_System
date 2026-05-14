@@ -12,6 +12,9 @@ A system for the Discord platform that relays news articles directly from online
 ## Background
 This project was started for no reason other than the desire to have news articles directly relayed and posted automatically on our Discord server's channel, compared to us reposting them manually. While there are other similar projects out there, I would rather not to miss out on the opportunity to learn how to make such a system myself.
 
+## Features
+- WIP
+
 ## Installation
 Currently unavailable.
 
