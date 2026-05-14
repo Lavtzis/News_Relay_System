@@ -1,4 +1,5 @@
 # News Relay System
+![GitHub Created At](https://img.shields.io/github/created-at/Lavtzis/News_Relay_System?color=bright-green&style=flat-square)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
