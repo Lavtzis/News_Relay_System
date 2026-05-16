@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 
 ##### Core  
 
+from src.events.response import hello2
+
+hello2()
+
 # dotenv
 load_dotenv()
 token = os.getenv('TOKEN')
