@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 # Core
-# Test file to test communication with a select channel on Discord.
+# Test file to test importing external commands to main or other.
 
 class greetingsResponse(commands.Cog):
     def __init__(self, bot):
