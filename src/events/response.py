@@ -8,8 +8,14 @@ class greetingsResponse(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.command()
-    async def hello2(ctx):
+    @commands.Cog.listener()
+    async def on_ready():
+        print(f"Response file is ready!")
+
+    @commands.command
+    async def hello2(self, ctx):
         await ctx.send(f"Hello from the response.py file!")
 
-print(f"Hello2 has been loaded successfully")
+##### 
+async def setup(bot):
+    await bot.add_cog(greetingsResponse(bot))
