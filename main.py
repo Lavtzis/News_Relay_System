@@ -4,7 +4,7 @@ from discord.ext import commands
 import logging
 from dotenv import load_dotenv
 
-##### Core   
+##### Core  
 
 # dotenv
 load_dotenv()
