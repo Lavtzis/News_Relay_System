@@ -23,5 +23,3 @@ bot = commands.Bot(command_prefix='!n', intents=intents)
 
 ##### Bot Run Token -- DONT TOUCH
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
-
-print("system reaches this places")
