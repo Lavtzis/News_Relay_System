@@ -38,6 +38,7 @@ async def botInfo(ctx):
     embedVar.add_field(name="!botInfo", value="Posts a panel with information about available commands and information relevant to this Bot.", inline=False)
     embedVar.add_field(name="!selectChannel", value="Select a channel by saying the channel ID you wish the bot to post the news articles in.", inline=False)
     await ctx.channel.send(embed=embedVar)
+    # Use embeds similarly later on for the news articles. TEST WEBHOOKS
 
     
 ##### Bot Run Token & Logging -- DONT TOUCH
