@@ -21,5 +21,9 @@ intents.members = True
 # Command Settings
 bot = commands.Bot(command_prefix='!n', intents=intents)
 
+@bot.event
+async def on_ready():
+    print(f"System ready:, {bot.user.name}")
+
 ##### Bot Run Token -- DONT TOUCH
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
