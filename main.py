@@ -21,21 +21,13 @@ intents.members = True
 # Command Settings
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+# Functions
 @bot.event
 async def on_ready():
-    print(f"System ready: {bot.user.name}")
-
-# Test Command -- Remove later on
-@bot.command()
-async def hello(ctx):
-    await ctx.send(f"Hello there {ctx.author.mention}")
-
-# Temporary Command -- Remove later on as well
-@bot.command()
-async def terminate(ctx):
-    print(f"Bot will be terminating...")
-    await bot.close()
+    print(f"system ready: {bot.user.name}")
 
 
-##### Bot Run Token -- DONT TOUCH
+
+
+##### Bot Run Token & Logging -- DONT TOUCH
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
