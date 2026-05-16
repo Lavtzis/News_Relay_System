@@ -21,7 +21,7 @@ Currently unavailable.
 ## Usage
 Currently unavailable.
 
-While this is currently unavailable, it is planned that this can be used by anyone, anytime by running it in their own IDEs or by hosting it on a server.
+While this is currently unavailable, it is planned that this can be used by anyone, anytime by running it on their own computers through an IDE or by hosting it on a server.
 
 ## License
 
