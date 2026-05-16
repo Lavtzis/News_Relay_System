@@ -27,6 +27,15 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f"system ready: {bot.user.name}")
 
+#@bot.event
+#async def on_message(message):
+#    if message.content.startswith('!info'):
+#        await message.channel.send("Good job.")
+
+@bot.command()
+async def botInfo(ctx):
+    print("No function yet.")
+
     
 ##### Bot Run Token & Logging -- DONT TOUCH
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
