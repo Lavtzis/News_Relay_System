@@ -30,6 +30,7 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send(f"Hello there {ctx.author.mention}")
 
+# Temporary Command -- Remove later on as well
 @bot.command()
 async def terminate(ctx):
     print(f"Bot will be terminating...")
