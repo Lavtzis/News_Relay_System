@@ -4,7 +4,7 @@ from discord.ext import commands
 import logging
 from dotenv import load_dotenv
 
-##### Main Branch   
+##### Core   
 
 # dotenv
 load_dotenv()
@@ -22,4 +22,6 @@ intents.members = True
 bot = commands.Bot(command_prefix='!n', intents=intents)
 
 ##### Bot Run Token -- DONT TOUCH
-bot.run(token, log_handler=handler, log_level=logging.debug)
+bot.run(token, log_handler=handler, log_level=logging.DEBUG)
+
+print("system reaches this places")
