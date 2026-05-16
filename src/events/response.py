@@ -9,7 +9,7 @@ class greetingsResponse(commands.Cog):
         self.bot = bot
     
     @commands.command()
-    async def hello2(res):
-        await res.send(f"Hello from the response.py file!")
+    async def hello2(ctx):
+        await ctx.send(f"Hello from the response.py file!")
 
 print(f"Hello2 has been loaded successfully")
