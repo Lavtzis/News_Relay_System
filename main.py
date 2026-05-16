@@ -6,10 +6,6 @@ from dotenv import load_dotenv
 
 ##### Core  
 
-from src.events.response import hello2
-
-hello2()
-
 # dotenv
 load_dotenv()
 token = os.getenv('TOKEN')
@@ -27,7 +23,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f"System ready:, {bot.user.name}")
+    print(f"System ready: {bot.user.name}")
 
 # Test Command -- Remove later on
 @bot.command()
