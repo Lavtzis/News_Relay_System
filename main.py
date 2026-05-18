@@ -13,15 +13,8 @@ load_dotenv()
 token = os.getenv('TOKEN')
 
 # Logging (Debug & Crashes)
-debug_handler = logging.FileHandler(filename='discord_news_debug.log', encoding='utf-8', mode='w')
-debug_handler.setLevel(logging.DEBUG)
-
-main_handler = logging.FileHandler(filename='discord_news.log', encoding='utf-8', mode='w')
-main_handler.setLevel(logging.INFO)
-
-logging.basicConfig(level=logging.DEBUG, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s", handlers=[debug_handler, main_handler])
-
-#handler = logging.FileHandler(filename='discord_news.log', encoding='utf-8', mode='w')
+from src.handlers.log_handler import logger
+logger()
 
 # Discord Intents
 intents = discord.Intents.default()
@@ -35,11 +28,6 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 @bot.event
 async def on_ready():   
     print(f"system ready: {bot.user.name}")
-
-#@bot.event
-#async def on_message(message):
-#    if message.content.startswith('!info'):
-#        await message.channel.send("Good job.")
 
 # Deprecated - Used only for testing - Will be removed once Cog implementation is compplete
 @bot.command()
@@ -55,6 +43,7 @@ async def oldBotInfo(ctx):
 #bot.run(token, log_handler=handler, log_level=logging.DEBUG)
 async def main():
     await bot.load_extension("src.commands.infoTab")
+    await bot.load_extension("src.events.automatedResponses")
     await bot.start(token)
 
 asyncio.run(main())
