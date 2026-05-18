@@ -13,8 +13,9 @@ class automatedResponses(commands.Cog):
         print(f"Automated responses ready: {self.bot.user.name}")
         channel = self.bot.get_channel(1488399642969374800)
         #dt.strftime("%d:%m:%Y:%H:%M")
-        #time = dt.now()
-        await channel.send(f"{time} - News Bot is Online.")
+        #time = dt.datetime
+        #await channel.send(f"{time} - News Bot is Online.")
+        await channel.send(f"News Bot is Online.")
 
 async def setup(bot):
     await bot.add_cog(automatedResponses(bot))
