@@ -13,7 +13,15 @@ load_dotenv()
 token = os.getenv('TOKEN')
 
 # Logging (Debug & Crashes)
-handler = logging.FileHandler(filename='discord_news.log', encoding='utf-8', mode='w')
+debug_handler = logging.FileHandler(filename='discord_news_debug.log', encoding='utf-8', mode='w')
+debug_handler.setLevel(logging.DEBUG)
+
+main_handler = logging.FileHandler(filename='discord_news.log', encoding='utf-8', mode='w')
+main_handler.setLevel(logging.INFO)
+
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s", handlers=[debug_handler, main_handler])
+
+#handler = logging.FileHandler(filename='discord_news.log', encoding='utf-8', mode='w')
 
 # Discord Intents
 intents = discord.Intents.default()
@@ -27,10 +35,6 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 @bot.event
 async def on_ready():   
     print(f"system ready: {bot.user.name}")
-
-async def main():
-    await bot.load_extension("src.commands.infoTab")  # no .py extension
-    await bot.start(token)
 
 #@bot.event
 #async def on_message(message):
@@ -49,4 +53,8 @@ async def oldBotInfo(ctx):
     
 ##### Bot Run Token & Logging -- DONT TOUCH
 #bot.run(token, log_handler=handler, log_level=logging.DEBUG)
+async def main():
+    await bot.load_extension("src.commands.infoTab")
+    await bot.start(token)
+
 asyncio.run(main())
