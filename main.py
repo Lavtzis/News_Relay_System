@@ -4,6 +4,7 @@ from discord.ext import commands
 import logging
 from dotenv import load_dotenv
 import datetime as dt
+import asyncio
 
 ##### Core  
 
@@ -24,8 +25,12 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Functions (Events & Commands) -- These will later on be separated into different files later on (In order to declutter the main.py file).
 @bot.event
-async def on_ready():
+async def on_ready():   
     print(f"system ready: {bot.user.name}")
+
+async def main():
+    await bot.load_extension("src.commands.infoTab")  # no .py extension
+    await bot.start(token)
 
 #@bot.event
 #async def on_message(message):
@@ -42,4 +47,5 @@ async def botInfo(ctx):
 
     
 ##### Bot Run Token & Logging -- DONT TOUCH
-bot.run(token, log_handler=handler, log_level=logging.DEBUG)
+#bot.run(token, log_handler=handler, log_level=logging.DEBUG)
+asyncio.run(main())
