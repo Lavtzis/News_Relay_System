@@ -37,8 +37,9 @@ async def main():
 #    if message.content.startswith('!info'):
 #        await message.channel.send("Good job.")
 
+# Deprecated - Used only for testing - Will be removed once Cog implementation is compplete
 @bot.command()
-async def botInfo(ctx):
+async def oldBotInfo(ctx):
     embedVar = discord.Embed(title="News Relay System (Bot)", description="This is a Discord system/bot that relays news articles from an external database or feed into a specified Discord channel.")
     embedVar.add_field(name="!botInfo", value="Posts a panel with information about available commands and information relevant to this Bot.", inline=False)
     embedVar.add_field(name="!selectChannel", value="Select a channel by saying the channel ID you wish the bot to post the news articles in.", inline=False)
