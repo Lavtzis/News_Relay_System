@@ -37,10 +37,8 @@ async def oldBotInfo(ctx):
     embedVar.add_field(name="!selectChannel", value="Select a channel by saying the channel ID you wish the bot to post the news articles in.", inline=False)
     await ctx.channel.send(embed=embedVar)
     # Use embeds similarly later on for the news articles. TEST WEBHOOKS
-
     
 ##### Bot Run Token & Logging -- DONT TOUCH
-#bot.run(token, log_handler=handler, log_level=logging.DEBUG)
 async def main():
     await bot.load_extension("src.commands.infoTab")
     await bot.load_extension("src.commands.administratorCommands")
