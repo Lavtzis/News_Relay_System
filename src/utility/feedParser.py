@@ -13,6 +13,8 @@ import feedparser
 
 incoming = feedparser.parse('https://rss.app/feeds/tU4QxjXvV6DFf7Rl.xml')
 
+len(incoming['items'])
+
 # Not Final. Testing still
 title = incoming.entries[0].title
 description = incoming.entries[0].description
