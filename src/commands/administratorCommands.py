@@ -13,9 +13,10 @@ class administratorPanel(commands.Cog):
         await ctx.channel.send("This is the administrator panel.")
 
     @commands.command()
-    @commands.is_owner()
+    #@commands.is_owner() #Fix Later
     async def shutdownBot(self, ctx):
         await ctx.channel.send("This will shutdown the bot.")
+
     # Commmands to be added
     #
     # - Shutdown command, to shutdown without need to turn off the server (COMPLETE SHUTDOWN)
