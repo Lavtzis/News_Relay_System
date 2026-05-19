@@ -1,10 +1,10 @@
+# File at the moment has no use except testing when neccessary
 import discord
 from discord.ext import commands
 
-# Core
 # Test file to test importing external commands to main or other.
 
-class greetingsResponse(commands.Cog):
+class responses(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
@@ -18,4 +18,4 @@ class greetingsResponse(commands.Cog):
 
 ##### 
 async def setup(bot):
-    await bot.add_cog(greetingsResponse(bot))
+    await bot.add_cog(responses(bot))
