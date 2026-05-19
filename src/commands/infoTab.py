@@ -12,6 +12,7 @@ class infoTab(commands.Cog):
         embedVar = discord.Embed(title="News Relay System (Bot)", description="This is a Discord system/bot that relays news articles from an external database or feed into a specified Discord channel.")
         embedVar.add_field(name="!botInfo", value="Posts a panel with information about available commands and information relevant to this Bot.", inline=False)
         embedVar.add_field(name="!selectChannel", value="Select a channel by saying the channel ID you wish the bot to post the news articles in.", inline=False)
+        #embedVar.add_field()
         await ctx.channel.send(embed=embedVar)
 
 async def setup(bot):
