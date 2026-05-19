@@ -5,10 +5,17 @@ import discord
 from discord.ext import commands
 
 
-def embedGenerator():
+def embedGenerator(titleIn, descriptionIn):
 
     embedVar = discord.Embed(title="TestTitle")
+    embedVar.add_field(name="Test", value="{titleIn}")
 
-embedOut = embedGenerator
+    # Debugging
+    print(titleIn)
+    print(descriptionIn)
+    
+    return embedVar
+
+embedOut = embedGenerator("hi", "desc")
 
 print(embedOut)
