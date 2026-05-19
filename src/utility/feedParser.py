@@ -5,6 +5,10 @@ import feedparser
 
 incoming = feedparser.parse('https://rss.app/feeds/tU4QxjXvV6DFf7Rl.xml')
 
-parsedInfo = incoming
+title = incoming.entries[0].title
+description = incoming.entries[0].description
+link = incoming.entries[0].link
 
-print(parsedInfo)
+print(title)
+print(description)
+print(link)
