@@ -1,3 +1,5 @@
+# Logging module moved to a separate file to declutter the main file.
+# TODO Add better filters later on for the logs and the possibility of more seperate 
 import logging
 
 def logger():
