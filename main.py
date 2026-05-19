@@ -43,6 +43,7 @@ async def oldBotInfo(ctx):
 #bot.run(token, log_handler=handler, log_level=logging.DEBUG)
 async def main():
     await bot.load_extension("src.commands.infoTab")
+    await bot.load_extension("src.commands.administratorCommands")
     await bot.load_extension("src.events.automatedResponses")
     await bot.start(token)
 
