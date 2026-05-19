@@ -10,15 +10,19 @@ class administratorPanel(commands.Cog):
     
     @commands.command()
     async def adminInfo(self, ctx):
-        await ctx.channel.send("This is the administrator panel")
+        await ctx.channel.send("This is the administrator panel.")
 
+    @commands.command()
+    @commands.is_owner()
+    async def shutdownBot(self, ctx):
+        await ctx.channel.send("This will shutdown the bot.")
     # Commmands to be added
     #
     # - Shutdown command, to shutdown without need to turn off the server (COMPLETE SHUTDOWN)
     # - Halt command, bot ONLINE but doesn't post news anymore.
     # - Set Administrators, allows adding administrators who can use the administrator commands.
     # - Remove Administrators, removing administrators.
-    # - Change rate, change the rate/delay at which articles are posted.
+    # - Change/Set Rate, change the rate/delay at which articles are posted.
 
 async def setup(bot):
     await bot.add_cog(administratorPanel(bot))
