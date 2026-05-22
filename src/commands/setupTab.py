@@ -5,13 +5,13 @@
 import discord
 from discord.ext import commands
 
-class setupCommands(commands.cog):
+class setupCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command
+    @commands.command()
     async def setupGuide(self, ctx):
         await ctx.channel.send("This will post the setup guide")
 
 async def setup(bot):
-    await bot.add_cog(setupCommands)
+    await bot.add_cog(setupCommands(bot))
