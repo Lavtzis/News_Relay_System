@@ -12,8 +12,9 @@ class administratorPanel(commands.Cog):
     async def adminInfo(self, ctx):
         await ctx.channel.send("This is the administrator panel.")
 
+    # FIX
     @commands.command()
-    #@commands.is_owner() #Fix Later
+    #@commands.is_owner()
     async def shutdownBot(self, ctx):
         await ctx.channel.send("This will shutdown the bot.")
 
