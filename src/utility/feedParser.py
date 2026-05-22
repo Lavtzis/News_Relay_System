@@ -11,9 +11,8 @@
 # RSS provides all 4.
 import feedparser
 
-incoming = feedparser.parse('https://rss.app/feeds/tU4QxjXvV6DFf7Rl.xml')
-
-len(incoming['items'])
+feed = 'https://rss.app/feeds/tU4QxjXvV6DFf7Rl.xml'
+incoming = feedparser.parse(feed)
 
 # Not Final. Testing still
 title = incoming.entries[0].title
@@ -23,3 +22,4 @@ link = incoming.entries[0].link
 print(title)
 print(description)
 print(link)
+#print(title,'\n',description,'\n',link)
