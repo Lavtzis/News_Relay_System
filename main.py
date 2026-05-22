@@ -34,8 +34,8 @@ async def on_ready():
 async def main():
     await bot.load_extension("src.commands.infoTab")
     await bot.load_extension("src.commands.administratorCommands")
+    await bot.load_extension("src.commands.setupTab")
     await bot.load_extension("src.events.automatedResponses")
-    await bot.load_extension("src.functions.embedCreator")
     await bot.start(token)
 
 asyncio.run(main())
