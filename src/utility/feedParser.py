@@ -23,6 +23,7 @@ def get_Image(source):
     proc = incoming.entries[0].summary
 
     # Specific re(Regex) is made to work with RSS. Unknown if it works with other feeds.
+    # https://www.geeksforgeeks.org/python/regular-expression-python-examples/
     match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', proc)
     print(match.group(1))
 
