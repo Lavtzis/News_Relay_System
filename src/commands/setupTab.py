@@ -9,9 +9,11 @@ class setupCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    # Command/Function name might be changed later on to something more appropriate.
     @commands.command()
     async def setupGuide(self, ctx):
-        await ctx.channel.send("This will post the setup guide")
+        em = discord.Embed(title="Setup Guide", description="SETUP BOT TEXT, ADD LATER")
+        await ctx.channel.send(embed=em)
 
 async def setup(bot):
     await bot.add_cog(setupCommands(bot))
