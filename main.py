@@ -22,7 +22,6 @@ intents.members = True
 
 # Command Settings
 ownerId = os.getenv('OWNER_ID')
-#owner_id=ownerId # Put after command_prefix, check documentation
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Functions (Events & Commands) -- These will later on be separated into different files later on (In order to declutter the main.py file).
