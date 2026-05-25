@@ -2,9 +2,13 @@
 import discord
 from discord.ext import commands
 
-# RSS
+# RSS / Feeds
 FEED_URLS = []
-POST_INTERVAL = 10 # REMINDER, number represents minutes, similarly to RSS interval.
+POST_INTERVAL = 10 # REMINDER, number represents minutes, similarly to RSS' interval settings.
+
+# Channels - Where the feeds will be posted at
+CHANNEL = ''
+#CHANNELS = [] # Currently unused, will be used later on so the bot can be post different feeds at different
 
 # Misc
-EMBED_CLR = "" # Unused
+EMBED_COLOR = '' # Unused 
